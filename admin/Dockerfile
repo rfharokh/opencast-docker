@@ -11,8 +11,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-FROM docker-maven-3.6:latest AS build
-
 ARG repo="https://github.com/rfharokh/opencast-8.6"
 ARG branch="8.x"
 

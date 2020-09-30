@@ -11,7 +11,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-FROM maven:3.6-jdk-8-slim AS build
+FROM docker-maven-3.6:latest AS build
 
 ARG repo="https://github.com/opencast/opencast"
 ARG branch="8.x"

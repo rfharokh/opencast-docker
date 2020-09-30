@@ -13,7 +13,7 @@
 
 FROM docker-maven-3.6:latest AS build
 
-ARG repo="https://github.com/opencast/opencast"
+ARG repo="https://github.com/rfharokh/opencast-8.6"
 ARG branch="8.x"
 
 ENV OPENCAST_DISTRIBUTION="admin" \

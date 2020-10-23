@@ -17,21 +17,21 @@
 set -e
 
 # shellcheck source=./scripts/helper.sh
-. "${OPENCAST_SCRIPTS}/helper.sh"
+#. "${OPENCAST_SCRIPTS}/helper.sh"
 # shellcheck source=./scripts/tz.sh
-. "${OPENCAST_SCRIPTS}/tz.sh"
+#. "${OPENCAST_SCRIPTS}/tz.sh"
 # shellcheck source=./scripts/opencast.sh
-. "${OPENCAST_SCRIPTS}/opencast.sh"
+#. "${OPENCAST_SCRIPTS}/opencast.sh"
 # shellcheck source=./scripts/activemq.sh
-. "${OPENCAST_SCRIPTS}/activemq.sh"
+#. "${OPENCAST_SCRIPTS}/activemq.sh"
 # shellcheck source=./scripts/db.sh
-. "${OPENCAST_SCRIPTS}/db.sh"
+#. "${OPENCAST_SCRIPTS}/db.sh"
 # shellcheck source=./scripts/h2.sh
-. "${OPENCAST_SCRIPTS}/h2.sh"
+#. "${OPENCAST_SCRIPTS}/h2.sh"
 # shellcheck source=./scripts/jdbc.sh
-. "${OPENCAST_SCRIPTS}/jdbc.sh"
+#. "${OPENCAST_SCRIPTS}/jdbc.sh"
 # shellcheck source=./scripts/mysql.sh
-. "${OPENCAST_SCRIPTS}/mysql.sh"
+#. "${OPENCAST_SCRIPTS}/mysql.sh"
 
 
 opencast_main_check() {

@@ -104,6 +104,7 @@ COPY --chown=opencast:opencast assets/scripts "${OPENCAST_SCRIPTS}"
 COPY --chown=opencast:opencast assets/support "${OPENCAST_SUPPORT}"
 COPY --chown=opencast:opencast assets/etc/* "${OPENCAST_CONFIG}/"
 COPY assets/docker-entrypoint.sh assets/docker-healthcheck.sh /
+RUN sed -i -e 's/\r$//' /docker-entrypoint.sh
 
 RUN apt-get update \
  && apt-get install -y --no-install-recommends \

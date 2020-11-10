@@ -113,9 +113,11 @@ opencast_main_stop() {
 
 case ${1} in
   app:init)
+    echo "init"
     opencast_main_init
     ;;
   app:start)
+    echo "start"
     opencast_main_init
     opencast_db_trytoconnect
     opencast_main_start

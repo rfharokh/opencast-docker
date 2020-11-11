@@ -45,6 +45,7 @@ RUN apt-get update \
  && chown root:root ff* \
  && mv ff* /usr/local/bin \
   \
+ && groupadd --system -g "${OPENCAST_GID}" "${OPENCAST_GROUP}" \ 
  && useradd --system -M -N -g "${OPENCAST_GROUP}" -d "${OPENCAST_HOME}" -u "${OPENCAST_UID}" "${OPENCAST_USER}" \
  && mkdir -p "${OPENCAST_SRC}" "${OPENCAST_HOME}" \
  && chown -R "${OPENCAST_USER}:${OPENCAST_GROUP}" "${OPENCAST_SRC}" "${OPENCAST_HOME}" \
@@ -91,8 +92,7 @@ ENV OPENCAST_SCRIPTS="${OPENCAST_HOME}/docker/scripts" \
     OPENCAST_SUPPORT="${OPENCAST_HOME}/docker/support" \
     OPENCAST_CONFIG="${OPENCAST_HOME}/etc"
 
-RUN groupadd --system -g "${OPENCAST_GID}" "${OPENCAST_GROUP}" \
- && useradd --system -M -N -g "${OPENCAST_GROUP}" -d "${OPENCAST_HOME}" -u "${OPENCAST_UID}" "${OPENCAST_USER}" \
+RUN useradd --system -M -N -g "${OPENCAST_GROUP}" -d "${OPENCAST_HOME}" -u "${OPENCAST_UID}" "${OPENCAST_USER}" \
  && mkdir -p "${OPENCAST_DATA}" \
  && chown -R "${OPENCAST_USER}:${OPENCAST_GROUP}" "${OPENCAST_DATA}"
 

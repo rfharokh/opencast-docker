@@ -52,7 +52,7 @@ opencast_helper_replaceinfile() {
   for var in "$@"; do
     eval exp_var="\$${var}"
     # shellcheck disable=SC2154
-    sed -ri "s/[{]{2}${var}[}]{2}/$( echo "${exp_var}" | sed -e 's/[\/&]/\\&/g' )/g" "${file}"
+    sed -ri "s/[{]{2}${var}[}]{2}/$( echo "${exp_var}" | sed --debug -e 's/[\/&]/\\&/g' )/g" "${file}"
   done
 }
 

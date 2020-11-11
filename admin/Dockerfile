@@ -83,7 +83,7 @@ ENV OPENCAST_VERSION="8.6" \
     OPENCAST_DATA="/data" \
     OPENCAST_CUSTOM_CONFIG="/etc/opencast" \
     OPENCAST_USER="opencast" \
-    OPENCAST_GROUP="opencast" \
+    OPENCAST_GROUP="root" \
     OPENCAST_UID="800" \
     OPENCAST_GID="800" \
     OPENCAST_REPO="${repo}" \
@@ -99,10 +99,10 @@ RUN groupadd --system -g "${OPENCAST_GID}" "${OPENCAST_GROUP}" \
 
 COPY --from=build /usr/local/sbin/su-exec /usr/local/sbin/su-exec
 COPY --from=build /usr/local/bin/ff* /usr/local/sbin/
-COPY --chown=opencast:opencast --from=build "${OPENCAST_HOME}" "${OPENCAST_HOME}"
-COPY --chown=opencast:opencast assets/scripts "${OPENCAST_SCRIPTS}"
-COPY --chown=opencast:opencast assets/support "${OPENCAST_SUPPORT}"
-COPY --chown=opencast:opencast assets/etc/* "${OPENCAST_CONFIG}/"
+COPY --chown=opencast:root --from=build "${OPENCAST_HOME}" "${OPENCAST_HOME}"
+COPY --chown=opencast:root assets/scripts "${OPENCAST_SCRIPTS}"
+COPY --chown=opencast:root assets/support "${OPENCAST_SUPPORT}"
+COPY --chown=opencast:root assets/etc/* "${OPENCAST_CONFIG}/"
 COPY assets/docker-entrypoint.sh assets/docker-healthcheck.sh /
 RUN chmod +w /docker-entrypoint.sh
 RUN chmod 777 "${OPENCAST_CONFIG}/"

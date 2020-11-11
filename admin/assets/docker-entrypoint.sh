@@ -119,6 +119,7 @@ case ${1} in
   app:start)
     echo "start"
     whoami
+    id
     opencast_main_init
     opencast_db_trytoconnect
     opencast_main_start

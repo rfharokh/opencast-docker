@@ -49,6 +49,7 @@ opencast_opencast_check() {
 opencast_opencast_configure() {
   pwd
   ls -la
+  lsof etc
   echo "Run opencast_opencast_configure"
   opencast_helper_replaceinfile "etc/custom.properties" \
     "ORG_OPENCASTPROJECT_ADMIN_EMAIL" \

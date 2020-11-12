@@ -114,6 +114,7 @@ RUN apt-get update \
       tesseract-ocr tesseract-ocr-eng \
       sox synfig \
       nfs-common netcat-openbsd \
+      lsof \
  && javac "${OPENCAST_SCRIPTS}/TryToConnectToDb.java" \
  && rm -rf /tmp/* /var/lib/apt/lists/* "${OPENCAST_SCRIPTS}/TryToConnectToDb.java"
 

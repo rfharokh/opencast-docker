@@ -51,6 +51,7 @@ opencast_opencast_configure() {
   ls -la
   lsof etc
   echo "Run opencast_opencast_configure"
+  sleep 5m
   opencast_helper_replaceinfile "etc/custom.properties" \
     "ORG_OPENCASTPROJECT_ADMIN_EMAIL" \
     "ORG_OPENCASTPROJECT_SERVER_URL" \

@@ -51,7 +51,6 @@ opencast_opencast_check() {
 opencast_opencast_configure() {
   pwd
   ls -la
-  lsof etc
   echo "Run opencast_opencast_configure"
   sleep 5m
   opencast_helper_replaceinfile "etc/custom.properties" \

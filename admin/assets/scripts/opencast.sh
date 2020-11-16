@@ -34,6 +34,7 @@ fi
 opencast_opencast_check() {
   pwd
   ls -la
+  sleep 5m
   echo "Run opencast_opencast_check"
   opencast_helper_checkforvariables \
     "ORG_OPENCASTPROJECT_SERVER_URL" \

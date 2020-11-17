@@ -102,7 +102,7 @@ COPY --chown=opencast:root --from=build "${OPENCAST_HOME}" "${OPENCAST_HOME}"
 COPY --chown=opencast:root assets/scripts "${OPENCAST_SCRIPTS}"
 COPY --chown=opencast:root assets/support "${OPENCAST_SUPPORT}"
 COPY --chown=opencast:root assets/etc/* "${OPENCAST_CONFIG}/"
-COPY assets/docker-entrypoint.sh assets/docker-healthcheck.sh /
+COPY assets/docker-entrypoint.sh assets/docker-healthcheck.sh assets/scripts/my-entrypoint.sh /
 RUN chmod +w /docker-entrypoint.sh
 RUN chmod 777 "${OPENCAST_CONFIG}/"
 
@@ -124,5 +124,5 @@ EXPOSE 8080
 VOLUME [ "${OPENCAST_DATA}" ]
 
 HEALTHCHECK --timeout=10s CMD /docker-healthcheck.sh
-ENTRYPOINT ["/docker-entrypoint.sh"]
+ENTRYPOINT ["/my-entrypoint.sh"]
 CMD ["app:start"]

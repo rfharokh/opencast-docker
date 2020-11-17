@@ -31,7 +31,7 @@ RUN apt-get update \
  && apt-get install -y --no-install-recommends \
       tar gzip bzip2 xz-utils git \
       ca-certificates openssl \
-      make gcc g++ libc-dev \
+      make gcc g++ libc-dev lsof \
   \
  && git clone https://github.com/ncopa/su-exec.git /tmp/su-exec \
  && cd /tmp/su-exec \

@@ -32,10 +32,6 @@ else
 fi
 
 opencast_opencast_check() {
-  pwd
-  ls -la
-  echo "going to sleep for 5 minutes"
-#  sleep 5m
   echo "Run opencast_opencast_check"
   opencast_helper_checkforvariables \
     "ORG_OPENCASTPROJECT_SERVER_URL" \
@@ -52,6 +48,8 @@ opencast_opencast_configure() {
   pwd
   ls -la
   echo "Run opencast_opencast_configure"
+  lsof etc/
+  echo "going to sleep for 5 minutes"
   sleep 5m
   opencast_helper_replaceinfile "etc/custom.properties" \
     "ORG_OPENCASTPROJECT_ADMIN_EMAIL" \

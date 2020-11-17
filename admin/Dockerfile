@@ -105,6 +105,7 @@ COPY --chown=opencast:root assets/etc/* "${OPENCAST_CONFIG}/"
 COPY assets/docker-entrypoint.sh assets/docker-healthcheck.sh assets/scripts/my-entrypoint.sh /
 RUN chmod +w /docker-entrypoint.sh
 RUN chmod 777 "${OPENCAST_CONFIG}/"
+RUN chmod +x /my-entrypoint.sh
 
 RUN apt-get update \
  && apt-get install -y --no-install-recommends \

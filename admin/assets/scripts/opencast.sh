@@ -35,7 +35,7 @@ opencast_opencast_check() {
   pwd
   ls -la
   echo "going to sleep for 5 minutes"
-  sleep 5m
+#  sleep 5m
   echo "Run opencast_opencast_check"
   opencast_helper_checkforvariables \
     "ORG_OPENCASTPROJECT_SERVER_URL" \

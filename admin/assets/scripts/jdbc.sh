@@ -52,6 +52,10 @@ opencast_jdbc_trytoconnect() {
   password=$(grep "^org.opencastproject.db.jdbc.pass" etc/custom.properties | tr -d ' ' | cut -d '=' -f 2-)
   db_jar=$(find "${OPENCAST_HOME}/system/org/opencastproject" -name 'opencast-db-*.jar')
 
+  echo $db_jar
+  echo $driver
+  echo $url
+
   java -cp "${OPENCAST_SCRIPTS}:${db_jar}" \
     TryToConnectToDb \
     "${driver}" \

@@ -45,12 +45,12 @@ opencast_opencast_check() {
 }
 
 opencast_opencast_configure() {
-  pwd
-  ls -la
+  #pwd
+  #ls -la
   echo "Run opencast_opencast_configure"
-  lsof etc/
-  echo "going to sleep for 5 minutes"
-  sleep 5m
+  #lsof etc/
+  #echo "going to sleep for 5 minutes"
+  #sleep 5m
   opencast_helper_replaceinfile "etc/custom.properties" \
     "ORG_OPENCASTPROJECT_ADMIN_EMAIL" \
     "ORG_OPENCASTPROJECT_SERVER_URL" \

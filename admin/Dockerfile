@@ -102,10 +102,10 @@ RUN useradd --system -M -N -g "${OPENCAST_GROUP}" -d "${OPENCAST_HOME}" -u "${OP
 
 COPY --from=build /usr/local/sbin/su-exec /usr/local/sbin/su-exec
 COPY --from=build /usr/local/bin/ff* /usr/local/sbin/
-COPY --chown=opencast:root --from=build "${OPENCAST_HOME}" "${OPENCAST_HOME}"
-COPY --chown=opencast:root assets/scripts "${OPENCAST_SCRIPTS}"
-COPY --chown=opencast:root assets/support "${OPENCAST_SUPPORT}"
-COPY --chown=opencast:root assets/etc/* "${OPENCAST_CONFIG}/"
+COPY --chown=1000570000:root --from=build "${OPENCAST_HOME}" "${OPENCAST_HOME}"
+COPY --chown=1000570000:root assets/scripts "${OPENCAST_SCRIPTS}"
+COPY --chown=1000570000:root assets/support "${OPENCAST_SUPPORT}"
+COPY --chown=1000570000:root assets/etc/* "${OPENCAST_CONFIG}/"
 COPY assets/docker-entrypoint.sh assets/docker-healthcheck.sh assets/scripts/my-entrypoint.sh /
 RUN chmod +w /docker-entrypoint.sh
 RUN chmod 777 "${OPENCAST_CONFIG}/"

@@ -1,4 +1,8 @@
 #
+# Copyright 2016 The WWU eLectures Team All rights reserved.
+#
+# modified by RFH E-Learning-Services
+#
 # Licensed under the Educational Community License, Version 2.0
 # (the "License"); you may not use this file except in compliance with
 # the License. You may obtain a copy of the License at

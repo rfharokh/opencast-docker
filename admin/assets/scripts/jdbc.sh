@@ -52,6 +52,7 @@ opencast_jdbc_trytoconnect() {
   password=$(grep "^org.opencastproject.db.jdbc.pass" etc/custom.properties | tr -d ' ' | cut -d '=' -f 2-)
   db_jar=$(find "${OPENCAST_HOME}/system/org/opencastproject" -name 'opencast-db-*.jar')
 
+  echo "@Chris copy and paste von hier"
   echo $db_jar
   echo $driver
   echo $url
@@ -63,4 +64,5 @@ opencast_jdbc_trytoconnect() {
     "${user}" \
     "${password}" \
     "${NUMER_OF_TIMES_TRYING_TO_CONNECT_TO_DB}"
+  echo "@Chris bis hier, und keine Zeile auslassen!"
 }

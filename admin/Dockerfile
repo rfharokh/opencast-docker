@@ -129,5 +129,5 @@ EXPOSE 8080
 VOLUME [ "${OPENCAST_DATA}" ]
 
 # HEALTHCHECK --timeout=10s CMD /docker-healthcheck.sh
-ENTRYPOINT ["/my-entrypoint.sh"]
+ENTRYPOINT ["/docker-entrypoint.sh"]
 CMD ["app:start"]

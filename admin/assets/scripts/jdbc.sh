@@ -56,6 +56,7 @@ opencast_jdbc_trytoconnect() {
   echo $db_jar
   echo $driver
   echo $url
+  echo $ORG_OPENCASTPROJECT_DB_JDBC_DRIVER
 
   java -cp "${OPENCAST_SCRIPTS}:${db_jar}" \
     TryToConnectToDb \

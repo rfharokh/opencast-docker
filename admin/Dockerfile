@@ -120,6 +120,7 @@ RUN apt-get update \
       sox synfig \
       nfs-common netcat-openbsd \
       lsof \
+      vim.tiny \
  && javac "${OPENCAST_SCRIPTS}/TryToConnectToDb.java" \
  && rm -rf /tmp/* /var/lib/apt/lists/* "${OPENCAST_SCRIPTS}/TryToConnectToDb.java"
 
@@ -129,5 +130,5 @@ EXPOSE 8080
 VOLUME [ "${OPENCAST_DATA}" ]
 
 # HEALTHCHECK --timeout=10s CMD /docker-healthcheck.sh
-ENTRYPOINT ["/docker-entrypoint.sh"]
+ENTRYPOINT ["/my-entrypoint.sh"]
 CMD ["app:start"]

@@ -54,7 +54,7 @@ public class TryToConnectToDb {
         conn = DriverManager.getConnection(url, user, password);
       } catch (SQLException e) {
         failed = true;
-        System.out.println("FAILED" , e.getMessage());
+        System.out.println("FAILED" + e.getMessage());
       } finally {
         if (conn != null) {
           try {

@@ -121,7 +121,7 @@ RUN apt-get update \
       nfs-common netcat-openbsd \
       lsof \
       vim.tiny \
-      mariadb-client-core-10.3 \
+      mariadb-client-core-10.1 \
  && javac "${OPENCAST_SCRIPTS}/TryToConnectToDb.java" \
  && rm -rf /tmp/* /var/lib/apt/lists/* "${OPENCAST_SCRIPTS}/TryToConnectToDb.java"
 

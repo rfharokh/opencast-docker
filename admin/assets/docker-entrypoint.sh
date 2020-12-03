@@ -89,7 +89,7 @@ opencast_main_start() {
     exec su-exec "${OPENCAST_USER}":"${OPENCAST_GROUP}" bin/start-opencast debug
   fi
 
-  su-exec "${OPENCAST_USER}":"${OPENCAST_GROUP}" bin/start-opencast daemon &
+  bin/start-opencast daemon &
   OC_PID=$!
   trap opencast_main_stop TERM INT
 

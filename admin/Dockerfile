@@ -122,6 +122,7 @@ RUN apt-get update \
       lsof \
       vim.tiny \
       mariadb-client-core-10.1 \
+      nslookup \
  && javac "${OPENCAST_SCRIPTS}/TryToConnectToDb.java" \
  && rm -rf /tmp/* /var/lib/apt/lists/* "${OPENCAST_SCRIPTS}/TryToConnectToDb.java"
 

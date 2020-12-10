@@ -62,7 +62,7 @@ USER "${OPENCAST_USER}"
 RUN git clone --recursive "${OPENCAST_REPO}" "${OPENCAST_SRC}" \
  && cd "${OPENCAST_SRC}" \
  && git checkout "${OPENCAST_BRANCH}" \
- && mvn --batch-mode install \
+ && mvn --batch-mode install -q \
       -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn \
       -DskipTests=true \
       -Dcheckstyle.skip=true \

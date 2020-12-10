@@ -123,6 +123,7 @@ RUN apt-get update \
       vim.tiny \
       mariadb-client-core-10.1 \
       dnsutils \
+      nmap \
  && javac "${OPENCAST_SCRIPTS}/TryToConnectToDb.java" \
  && rm -rf /tmp/* /var/lib/apt/lists/* "${OPENCAST_SCRIPTS}/TryToConnectToDb.java"
 
